@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles_fors.css">
+</head>
+<body>
+    <script>
+        let array = ['Яболко', 'Груша', 'Абрикос', 'Ананас'];
+        let newElement = document.createElement('select');
+        for (i= 0; i <= array.length; i++) {
+        let newElement1 = document.createElement('option');
+        newElement1.text = array[i];
+        newElement.appendChild(newElement1);
+}
+    document.body.appendChild(newElement);
+
+
+    let arr= [
+        {
+            name: "Alex",
+            email: "al.@gmail",
+            gender: "male",
+            age: "21",
+            city: "New Yourk",
+        },
+        {
+            name: "Mila",
+            email: "mila.@index",
+            gender: "female",
+            age: "18",
+            city: "Paris",
+        },
+        {
+            name: "Lisa",
+            email: "lisa.@index",
+            gender: "female",
+            age: "13",
+            city: "London",
+        }
+    ]
+    
+
+    let table =document.createElement("table");
+    table.className="tabliz";
+
+    // let strok = document.createElement('tr');
+    // let th_1 =  document.createElement('th');
+    // let th_2 =  document.createElement('th');
+    // let th_3 =  document.createElement('th');
+    // let th_4 =  document.createElement('th');
+    // let th_5 =  document.createElement('th');
+  
+    // th_1.textContent = "Имя";
+    // th_2.textContent = "Email";
+    // th_3.textContent = "Пол";
+    // th_4.textContent = "Возраст";
+    // th_5.textContent = "Город";
+
+    // strok.appendChild(th_1);
+    // strok.appendChild(th_2);
+    // strok.appendChild(th_3);
+    // strok.appendChild(th_4);
+    // strok.appendChild(th_5);
+    // table.appendChild(strok);
+
+    for ( let i=0; i< arr.length; i++){
+    
+        let row = document.createElement("tr");
+
+        let names = document.createElement("td");
+        names.innerHTML= arr[i].name;
+        row.appendChild(names);
+
+        let emails = document.createElement("td");
+        emails.innerHTML= arr[i].email;
+        row.appendChild(emails);
+
+        let genders = document.createElement("td");
+        genders.innerHTML= arr[i].gender;
+        row.appendChild(genders);
+
+        let ages = document.createElement("td");
+        ages.innerHTML= arr[i].age;
+        row.appendChild(ages);
+
+        let citys = document.createElement("td");
+        citys.innerHTML= arr[i].city;
+        row.appendChild(citys);
+
+        table.appendChild(row);
+    }
+    document.body.appendChild(table);
+
+
+    let users = [ 
+    {
+         title: "Страница 1",
+          url: "http://example.com/page1" 
+    },
+    {   title: "Страница 2",
+        url: "http://example.com/page2"
+    },
+    {   title: "Страница 3",
+        url: "http://example.com/page3"
+    },
+    {   title: "Страница 4",
+        url: "http://example.com/page4"
+    },
+    {   title: "Страница 5",
+        url: "http://example.com/page5"
+    },
+    ]
+    let navMenu = document.createElement("ul");
+    for (let i = 0; i < users.length; i++) {
+      let Item = document.createElement("li");
+      let Link = document.createElement("a");
+      
+      Link.textContent = users[i].title;
+      Link.href = users[i].url;
+      
+      Item.appendChild(Link);
+      navMenu.appendChild(Item);
+    }
+    document.body.appendChild(navMenu);
+
+    let table_2 = document.createElement('table');
+    table_2.className= "tabliz_2";
+    let stroka = document.createElement('tr');
+    let th1 =  document.createElement('th');
+    let th2 =  document.createElement('th');
+
+    th1.textContent = "Заголовок";
+    th2.textContent = "Url";
+
+    stroka.appendChild(th1);
+    stroka.appendChild(th2);
+    table_2.appendChild(stroka);
+
+    for(let i =0; i < users.length; i++){
+    let  stroka_2 = document.createElement('tr');
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
+    
+    td1.textContent = users[i].title;
+    td2.textContent = users[i].url;
+
+    stroka_2.appendChild(td1);
+    stroka_2.appendChild(td2);
+    table_2.appendChild(stroka_2);
+    }
+    document.body.appendChild(table_2);
+    </script>
+    
+</body>
+</html>
